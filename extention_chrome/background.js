@@ -113,10 +113,6 @@ async function generatePdf(tabId) {
         chrome.tabs.get(tabId, (tabInfo) => {
           const pageUrl = new URL(tabInfo.url);
           let sanitizedPath = pageUrl.pathname.replace(/[^a-z0-9]/gi, '_').toLowerCase();
-          // ルートパスの場合は 'home' とする
-          if (sanitizedPath === '_' || sanitizedPath === '') {
-            sanitizedPath = 'home';
-          }
           const host = pageUrl.hostname.replace(/[^a-z0-9]/gi, '_').toLowerCase();
           const now = new Date();
           const year = now.getFullYear();
