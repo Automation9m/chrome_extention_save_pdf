@@ -120,7 +120,7 @@ async function generatePdf(tabId) {
           const day = String(now.getDate()).padStart(2, '0');
           const timestamp = `${year}${month}${day}`;
 
-          let filenameBase = `${host}${sanitizedPath}_${timestamp}`;
+          let filenameBase = `${host}${sanitizedPath}${timestamp}`;
           const maxFilenameLength = 100; // 最大ファイル名長（文字数）
           if (filenameBase.length > maxFilenameLength) {
             filenameBase = filenameBase.substring(0, maxFilenameLength);
