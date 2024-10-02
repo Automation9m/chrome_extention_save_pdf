@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "ページをPDF保存",
+  "version": "1.2",
+  "description": "ページを一番下までスクロールし、1ページのPDFとして保存します。",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "downloads",
+    "debugger",
+    "notifications"
+  ],
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
